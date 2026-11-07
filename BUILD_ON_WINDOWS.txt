@@ -1,0 +1,31 @@
+MEMBER CSV CLEANER
+Windows build instructions for Wade
+
+1. In File Explorer, right-click the build kit ZIP and select Extract All.
+   Open the extracted folder that contains build_windows.py.
+2. In that folder, open PowerShell or Windows Terminal. One way is to
+   type powershell in File Explorer's address bar and press Enter.
+3. Run:
+
+       python build_windows.py
+
+   Use the Windows Python that passed the project tests (3.10 through 3.15
+   with Tkinter). Internet access is needed to download PyInstaller for
+   this build. The script runs the tests, installs the build tool in a
+   temporary environment, builds the app, and prints the release ZIP path.
+
+4. Open the release folder and extract Member_CSV_Cleaner_Windows.zip.
+   If you build again, use the new numbered ZIP printed by the script.
+   Double-click Member_CSV_Cleaner.exe in the extracted folder. Use the
+   two included CSV files to load a batch, review a flagged field, and
+   save a cleaned copy to a new path. For the full practice choices used
+   in development, the expected export contains 23 records.
+
+5. Share the release ZIP with Rachel after the executable check passes.
+   She can extract it and open the app without installing Python. The
+   release ZIP contains the executable, README.txt, the editable CRM
+   template, and the fictional practice CSV.
+
+To verify independence from your development setup, try the extracted
+release on a Windows computer that does not have Python installed, if one
+is available. The build kit itself is for development; send the release ZIP.

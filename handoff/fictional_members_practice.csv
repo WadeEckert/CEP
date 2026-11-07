@@ -1,0 +1,29 @@
+﻿Given Name,Last Name,Mobile,Email,Mailing Address,Apartment / Unit,City,Province / State,Postal Code,Country,Signed On,Petition Group,Nickname,Practice Note
+  BRITTANY   SUE ,nunez-LOPEZ, +1 (617) 555-0101 ," brittany@EXAMPLE,com ","125 n. sample grove avenue,",004b,  boston ,massachusetts,02108-1234,United States of America,2/29/2024,,"Bree, ""B""",Routine cleanup plus leading zero and leap day
+ J. ,TAYLOR,303.555.0102,,,,,,,,1/7/2024,,,First initial with full last name
+ ÉLISE ,O'Neill,,elise+practice@example.org,,,,,,,6/14/2024,,,Accent and intentional mixed-case surname; email only
+,,(303) 555-0104,,,,,,,,6/14/2024,,,Blank names with a valid phone
+R.,K.,,,"P.O. Box #00027,",,Denver,co,80202,,6/14/2024,,,Initials only with a complete numbered PO Box
+Noel,Pine,,noel at example.com,,,,,,,6/14/2024,,,Excluded for no usable contact; recovery exercise
+Miles,Dale,,,21 Sample Lane # 007a,APT 007A,Denver,CO,80202,,6/14/2024,,,Same unit in both columns; use the more specific Apt label once
+Sienna,Cove,,sienna@example.com,48 Sample Brook Road Apt 4,Apt 5,Denver,CO,80202,,6/14/2024,,,Conflicting units; verified practice unit is Apt 5
+Devon,Lake,303-555-0109,,54 Example Vista Drive,,Denver,Colorado,,,6/14/2024,,,Partial address is missing ZIP; phone qualifies
+Rosa,Field,(303) 555-0110 ext 7,rosa@example.com,,,,,,,6/14/2024,,,Phone extension needs review; email qualifies
+Quinn,Vale,303-555-0111,"quinn@example.com, qvale@example.org",,,,,,,6/14/2024,,,Multiple emails need review; phone qualifies
+Iris,Wren,,iris@example.com,,,,,,,2/30/2024,,,Impossible date; verified practice date is 2/29/2024
+Sam,Elm,,sam@example.com,,,,,,,,,,Missing date; no verified replacement
+Mara,Bluff,,mara@example.com,,,,,,,12/31/2099,,,Future date; no verified replacement
+Owen,Marsh,,owen@example.com,66 Sample Harbour Road,,Toronto,ON,M5V 2T6,Canada,6/14/2024,,,Non-US address; email keeps record eligible
+ nina ,MOSS,,"nina@example,com",,,,,,,6/14/2024,TRAINING-A,,Email duplicate: same normalized name and email
+Nina,Moss,617-555-0117,NINA@example.com,,,,,,,6/14/2024,training-a,,Email duplicate: keep this record with the additional phone
+Avery,,+1 (720) 555-0118,,,,,,,,6/14/2024,,,Phone duplicate: first name only; no missing-surname flag
+ avery ,,720.555.0118,avery.alt@example.org,,,,,,,6/14/2024,,,Phone duplicate: keep both for the practice run
+Avery,Finch,720-555-0118,,,,,,,,6/14/2024,,,"Same phone as 18 and 19, but surname is not a wildcard"
+Tessa,Stone,,,81 Example Summit Street,B-2,Denver,Colorado,80202,,6/14/2024,,,Address-only duplicate: compare with record 22
+ TESSA ,STONE,,,81 EXAMPLE SUMMIT ST # B-2,,Denver,CO,80202,,6/14/2024,,,Address-only duplicate: exclude both in the practice run
+Robin,Frost,,robin@example.com,,,,,,,6/14/2024,TRAINING-A,,"Same name and email as 24, different populated petition"
+Robin,Frost,,robin@example.com,,,,,,,6/14/2024,TRAINING-B,,Keep both petitions when no batch group is applied
+Cameron,Ridge,,,93 Sample Orchard Boulevard,Apt 2,Denver,CO,80202,,6/14/2024,,,"Same name and street as 26, but different unit"
+Cameron,Ridge,,,93 Sample Orchard Blvd,Apt 3,Denver,CO,80202,,6/14/2024,,,Apt 3 and Apt 2 are distinct addresses
+Lee,Harbor,,lee@example.org,,,,,,,6/14/2024,TRAINING-A,,Matching email with one blank petition; keep record 27
+Lee,Harbor,,lee@example.org,,,,,,,6/14/2024,,,A blank petition does not prevent a possible match

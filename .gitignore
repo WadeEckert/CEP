@@ -1,0 +1,18 @@
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Generated builds
+/build/
+/dist/
+/release/
+*.exe
+*.zip
+
+# Internal documents and CSVs
+/resources/documents/
+*.csv
+!/resources/fictional_members_practice.csv
+!/handoff/fictional_members_practice.csv
