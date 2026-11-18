@@ -39,10 +39,10 @@ to Street and choose Separate street unit for the apartment or suite column.
 The program puts both in Street. If the unit is already part of the street
 text and has no separate column, just map the street to Street.
 
-2. SET THE PETITION GROUP AND PREPARE THE BATCH
+22. SET PROISSSUB AND PREPARE THE FILE
 
-If all records belong to one petition group, type the group's code in Batch
-petition group. Select Prepare batch to apply it and run cleanup. This
+If all records belong to one petition group, type the group's code in "PROISSUB". 
+Select The Prepare file button will apply it and run cleanup. This
 replaces any petition values already supplied for those records. You can
 leave the box empty to retain mapped petition values, including blanks.
 The template needs a PROISSUB or PROISSSUB column for this option.
@@ -251,7 +251,7 @@ IF YOU GET STUCK
 - Load columns reports an error: Check that both files are UTF-8 CSVs, the
   template has no data rows or repeated headings, and the source has the
   same number of columns in each data record as in its heading row.
-- Prepare batch reports a mapping error: Give every source column a
+- Prepare file reports a mapping error: Give every source column a
   destination or choose Ignore this column. Make sure no destination is
   used twice, and map Street before using Separate street unit.
 - Save cleaned CSV is unavailable: Read the next step under the buttons.

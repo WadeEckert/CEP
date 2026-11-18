@@ -394,7 +394,7 @@ class CorrectionReviewWindow(tk.Toplevel):
                 if field == "Street" and record.original_unit_value:
                     lines.append(f"Original separate unit: {_display(record.original_unit_value)}")
                 if field == self._batch.proissub_heading and field not in self._editable:
-                    lines.append("Set for every record. To change it, use Batch petition group on the main screen.")
+                    lines.append("Set for every record. To change it, use PROISSSUB on the main screen.")
         self._details.configure(state="normal")
         self._details.delete("1.0", "end")
         self._details.insert("1.0", "\n".join(lines) or "No records in this view.")

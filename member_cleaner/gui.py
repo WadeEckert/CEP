@@ -290,7 +290,7 @@ class MemberCleanerApp(ttk.Frame):
         self._mapping_body.bind("<Configure>", self._update_scroll_region)
         self._canvas.bind("<Configure>", self._resize_mapping)
 
-        petition = ttk.LabelFrame(self, text="3. Batch petition group", padding=8)
+        petition = ttk.LabelFrame(self, text="3. PROISSSUB", padding=8)
         petition.grid(row=4, column=0, sticky="ew", pady=(8, 0))
         self._petition_entry = ttk.Entry(petition, textvariable=self._petition_value, width=23)
         self._petition_entry.pack(side="left")
@@ -301,7 +301,7 @@ class MemberCleanerApp(ttk.Frame):
 
         actions = ttk.Frame(self, style="Page.TFrame")
         actions.grid(row=5, column=0, sticky="w", pady=10)
-        self._prepare_button = ttk.Button(actions, text="Prepare batch", command=self._prepare_batch,
+        self._prepare_button = ttk.Button(actions, text="Prepare file", command=self._prepare_batch,
                                           state="disabled")
         self._prepare_button.pack(side="left")
         self._review_button = ttk.Button(actions, text="Review duplicates...", command=self._review_duplicates,
@@ -446,7 +446,7 @@ class MemberCleanerApp(ttk.Frame):
     def _mapping_next_step(remaining: int) -> str:
         if remaining:
             return f"Next: choose a destination or role for {remaining} remaining source column{'s' if remaining != 1 else ''}."
-        return "Next: review the choices, then select Prepare batch."
+        return "Next: review the choices, then select Prepare file."
 
     def _mapping_changed(self, event: tk.Event | None) -> None:
         """A changed mapping requires a freshly prepared batch and summary."""
@@ -474,7 +474,7 @@ class MemberCleanerApp(ttk.Frame):
         if self.batch is not None and not self._confirm_discard():
             return
         self._discard_batch()
-        self._status.set("Check every column choice before preparing the batch.")
+        self._status.set("Check every column choice before preparing the file.")
         if self.session is None:
             return
         try:
@@ -547,7 +547,7 @@ class MemberCleanerApp(ttk.Frame):
         elif not available:
             help_text = "The template needs a PROISSUB or PROISSSUB column."
         elif batch is None:
-            help_text = f"Enter the group for {heading.strip()}. Prepare batch applies it to all records."
+            help_text = f"Enter the group for {heading.strip()}. Prepare file applies it to all records."
         elif pending:
             help_text = "Select Apply to all records before saving."
         elif batch.batch_proisssub is not None:
